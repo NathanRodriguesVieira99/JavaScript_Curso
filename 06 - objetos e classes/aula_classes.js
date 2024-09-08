@@ -43,3 +43,30 @@ ak.ano = 1947;
 ak.descricao = "lorem ipsun dolor";
 
 console.log(ak);
+
+// Constructor
+class carro {
+	nome;
+	ano;
+
+	constructor(nome, ano) {
+		this.nome = nome;
+		this.ano = ano;
+		this.quantoTempoQueLancou = 2024 - ano;
+	}
+
+	descreverII() {
+		console.log(
+			`o carro é ${this.nome} e o ano é ${this.ano}, lançou faz ${this.quantoTempoQueLancou} anos`,
+		);
+	}
+}
+
+const fusca = new carro("fusca", 1965);
+const audi = new carro("audi", 2020);
+
+fusca.descreverII();
+audi.descreverII();
+
+console.log(fusca);
+console.log(audi);
